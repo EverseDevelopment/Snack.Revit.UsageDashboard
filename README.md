@@ -1,4 +1,4 @@
-# Snack.AutomaticVideo
+# Snack.Revit.Usage.Dashboard
 
 ## About us
 
