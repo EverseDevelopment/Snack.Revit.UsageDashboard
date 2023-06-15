@@ -20,28 +20,24 @@
 
   <!-- this project files -->
   <link href="css/main.css" rel="stylesheet" />
+  <link href="css/index.css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="row" id="main-container">
-    <div class="col fill">
-      <div class="viewerContainer">
-        <div id="forgeViewer">
+ <div id="forgeViewer">
           <iframe width="100%" id="vid" height="100%"
             src="https://datastudio.google.com/embed/reporting/26a7996d-c873-4fcd-964f-fcb19be90021/page/ZjxrC"
             frameborder="0" style="border:0" allowfullscreen></iframe>
-
-        </div>
-      </div>
-      <div class="info-wrapper" data-target="#info-modal" data-toggle="modal">
-        <img src="images/infoIcon.png" id="info-logo" alt="logo" />
-      </div>
-      <a href="https://www.e-verse.com" target="_blank">
-        <img src="images/EverseLogo.png" id="bottom-logo" alt="logo" />
+<a href="https://www.e-verse.com" target="_blank" id="bottom-logo">
+        <img src="images/EverseLogo.png"  alt="logo" />
       </a>
-      <p id="model-name"></p>
-    </div>
-  </div>
+        </div>
+
+      <div class="info-wrapper" data-target="#info-modal" data-toggle="modal" tooltip-code="5">
+        <img src="images/info.png" id="info-logo" alt="logo"  />
+      </div>
+
+
   <!-- Start Modal -->
   <div class="modal fade" id="info-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
@@ -72,6 +68,167 @@
     </div>
   </div>
   <!-- End Modal -->
+
+  <!-- Start Modal Onboarding -->
+  <div class="modal fade bd-example-modal-lg" id="init-onboarding" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="row" style="text-align: center">
+              <div class="col-6">
+                <h1 class="modal-title"  style="margin: 5rem 0 3rem">Hello!</h1>
+                <div class="info-description-onboarding">
+                <p>I’m <strong>VEGA</strong></p>
+                <p>
+                 Explore new opportunities for your workflow! <strong>VEGA</strong> is a Dashboard that displays the Revit usage in real-time to improve efficiency. Let's go!
+                </p>
+                  <button id="show" class="onboarding-button" style="margin: 10rem 0">Let's start!</button>
+              </div>
+              </div>
+              <div class="col-6"style="display:flex;">
+                 <img src="images/Frame.png"  alt="logo" style="width: 38rem; margin: auto"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal Init Onboarding -->
+
+  <!-- Start Modal End-Onboarding -->
+  <div class="modal fade bd-example-modal-lg" id="end-onboarding" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="row" style="text-align: center">
+              <div class="col-6">
+                <h1 class="modal-title"  style="margin: 5rem 0 3rem">Alright!</h1>
+                <div class="info-description-onboarding">
+                <p><strong>Congratulations! Now you know
+this snack!</strong></p>
+                <p>
+                But this is just an example of what we can do to improve the efficiency of your workflow using Revit.
+                </p>
+                  <button id="play" class="onboarding-button-2" style="margin: 3rem 0 0">Play with our star VEGA!</button>
+                  <button id="talk" class="onboarding-button" style="margin: 3rem 0 10rem 0">I like It. Let’s talk</button>
+              </div>
+              </div>
+              <div class="col-6"style="display:flex;">
+                 <img src="images/Frame2.png"  alt="logo" style="width: 33rem; margin: auto"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal End-Onboarding -->
+
+  <!-- Start template -->
+  <div id="template" style="overflow:auto;top: 0; pointer-events: none; z-index: 100; position: absolute; height: 150vh; width: 100%;">
+    <div tooltip-code="1" style="padding: 3rem;
+    width: 24vw;
+    top: 8vh;
+    left: 6vw;
+    position: absolute;"></div>
+    <div tooltip-code="2" style="padding: 3rem;
+    width: 27vw;
+    top: 8vh;
+    left: 54vw;
+    position: absolute;"></div>
+    <div tooltip-code="3" style="padding: 3rem;
+    width: 21vw;
+    top: 53vh;
+    left: 54vw;
+    position: absolute;"></div>
+    <div tooltip-code="4" style="padding: 3rem;
+    width: 28vw;
+    top: 98vh;
+    left: 6vw;
+    position: absolute;"></div>
+  </div>
+  <!-- End template -->
 </body>
+
+
+
+<script type="module">
+  import { UserOnboarding } from "./js/index.js";
+  let userOnboarding
+
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(()=>{$('#init-onboarding').modal('show')}, 4000)
+    const steps = [
+      {
+        code: '1',
+        title: 'Documents',
+        message: 'Hey there! Find here the documents you were working on for the last 2 weeks.',
+        position: 'right'
+      },
+      {
+        code: '2',
+        title: 'User Usage',
+        message: 'And here, you can see who worked on each document the most during the same period.',
+        position: 'right'
+      },
+      {
+        code: '3',
+        title: 'Events',
+        message: 'Take a look at the event\'s performance and click on more details below to display more details about the Excel sheet on which this visualization is based.',
+        position: 'right'
+      },
+      {
+        code: '4',
+        title: 'Document use by week',
+        message: 'Here you can identify which document was the most popular one during the time.',
+        position: 'right'
+      },
+      {
+        code: '5',
+        title: 'Information button',
+        message: 'Curious about VEGA? Find here some technical information about this snack!',
+        position: 'right'
+      }
+    ]
+    userOnboarding = new UserOnboarding(steps, 0, '#E2D8CC', '#F94F46', handelFinish)
+  })
+
+  function initOnboarding(){
+    if(userOnboarding !== null){
+      $('#init-onboarding').modal('hide');
+      setTimeout(()=>{userOnboarding.showOnboarding()}, 500)
+    }
+  }
+  const button = document.getElementById('show')
+  button?.addEventListener("click", initOnboarding);
+
+  function endOnboarding(){
+      $('#end-onboarding').modal('hide');
+  }
+  const talkBtn = document.getElementById('talk')
+  talkBtn?.addEventListener("click", endOnboarding);
+  const playBtn = document.getElementById('play')
+  playBtn?.addEventListener("click", endOnboarding);
+
+  function handelFinish(){
+      if(userOnboarding !== null){
+          userOnboarding.closeOnboarding()
+      }
+      $('#end-onboarding').modal('show');
+  }
+
+  const elementoDestino = document.getElementById('template');
+  window.addEventListener('scroll', function() {
+    elementoDestino.scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  });
+
+</script>
 
 </html>
