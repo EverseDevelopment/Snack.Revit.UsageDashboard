@@ -1,0 +1,24 @@
+{
+  "name": "snack.revit.usagedashboard",
+  "version": "1.0.0",
+  "description": "Our team of AEC professionals, product designers, and software developers will work with you from initial assessment to software implementation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EverseDevelopment/Snack.Revit.UsageDashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EverseDevelopment/Snack.Revit.UsageDashboard/issues"
+  },
+  "homepage": "https://github.com/EverseDevelopment/Snack.Revit.UsageDashboard#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0"
+  }
+}
