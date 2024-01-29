@@ -1,6 +1,6 @@
 # Revit Usage Dashboard
 
-[<img src="https://github.com/EverseDevelopment/Snack.Revit.UsageDashboard/blob/main/public/images/ReadmeImage.png" width="443" height="207">](https://github.com/EverseDevelopment/Snack.Revit.UsageDashboard/wiki)
+[<img src="https://s3.amazonaws.com/everse.assets/GithubReadme/ReadmeImageRevitUsage.png">](https://github.com/EverseDevelopment/Snack.Revit.UsageDashboard/wiki)
 <br/>
 
 # Demo
@@ -15,6 +15,6 @@ We are an international mix of AEC professionals, product designers, and softwar
 
 <p align="center" width="100%">
     <a href="https://www.e-verse.com/">
-    <img src="https://s3.amazonaws.com/everse.assets/e-verse_logo_no+slogan.jpg" width="732" height="271" align="center">
+    <img src="https://s3.amazonaws.com/everse.assets/GithubReadme/e-verse_logo_no+slogan.jpg" align="center">
     </a>
 </p>
